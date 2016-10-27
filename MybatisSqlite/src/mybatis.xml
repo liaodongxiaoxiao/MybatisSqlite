@@ -20,7 +20,7 @@
 	</environments>
 	<mappers>  
     	<mapper resource="com/ldxx/ms/orm/User.xml" />  
-    
+    	<mapper resource="com/ldxx/ms/orm/Story.xml" /> 
 	</mappers>
 
 </configuration>
