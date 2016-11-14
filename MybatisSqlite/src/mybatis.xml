@@ -19,8 +19,8 @@
 		</environment>
 	</environments>
 	<mappers>  
-    	<mapper resource="com/ldxx/ms/orm/User.xml" />  
-    	<mapper resource="com/ldxx/ms/orm/Story.xml" /> 
+    	<mapper resource="com/ldxx/lottery/orm/LotteryResult-Map.xml" />  
+    	<mapper resource="com/ldxx/lottery/orm/BonusInfo-Map.xml" /> 
 	</mappers>
 
 </configuration>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="gbk" ?>     
+	<!DOCTYPE mapper     
+	PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"     
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="LotteryResult">
+	<select id="LotteryResult.queryByIssue" parameterType="String"
+		resultType="com.ldxx.lottery.orm.LotteryResult">
+		select * from lottery_result
+		where issue =
+		#{issue,jdbcType=VARCHAR}
+	</select>
+
+	
+</mapper>
+
+
+
+
+
+
+
+
+

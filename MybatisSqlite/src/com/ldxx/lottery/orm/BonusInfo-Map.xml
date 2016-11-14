@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="gbk" ?>     
+	<!DOCTYPE mapper     
+	PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"     
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="BonusInfo">
+
+	<insert id="BonusInfo.insert" parameterType="com.ldxx.lottery.orm.BonusInfo">
+		insert into bonus_info (
+			 issue,
+			 bonus_type,
+			 bonus,
+			 bonus_num
+		)
+		values (
+			#{issue,jdbcType=VARCHAR},
+			#{bonus_type,jdbcType=VARCHAR},
+			#{bonus,jdbcType=VARCHAR},
+			#{bonus_num,jdbcType=VARCHAR}
+		);
+	   </insert>
+	   
+	   <select id="queryDetailInfoByIssue" parameterType="String" resultType="com.ldxx.lottery.orm.BonusInfo">
+	   		select * from bonus_info where issue=#{issue,jdbcType=VARCHAR};
+	   </select>
+	   
+	   <delete id="BonusInfo.deleteByIssue" parameterType="String">
+	   		delete from bonus_info 
+	   		where issue=#{issue,jdbcType=VARCHAR};
+	   </delete>
+</mapper>
+
+
+
+
+
+
+
+
+
