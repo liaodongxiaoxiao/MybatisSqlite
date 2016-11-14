@@ -1,4 +1,4 @@
-package com.ldxx.ms.utils;
+package com.ldxx.utils;
 
 import java.io.IOException;
 import java.io.Reader;
