@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="gbk" ?>     
+	<!DOCTYPE mapper     
+	PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"     
+	"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+	<mapper namespace="ContinuousBall">
+
+	<delete id="ContinuousBall.deleteByIssue" parameterType="String">
+		delete from continuous_balls
+		where issue =#{issue,jdbcType=VARCHAR}
+	</delete>
+
+	<insert id="ContinuousBall.insertCB" parameterType="com.ldxx.lottery.orm.ContinuousBall">
+		insert
+		into continuous_balls (
+		issue,
+		continuous_ball,
+		continuous_num
+		)
+		values (
+		#{issue,jdbcType=VARCHAR},
+		#{continuous_ball,jdbcType=VARCHAR},
+		#{continuous_num,jdbcType=INTEGER}
+		)
+	</insert>
+
+	<select id="ContinuousBall.getContinuousBallByIssue" parameterType="String" resultType="com.ldxx.lottery.orm.ContinuousBall">
+		SELECT issue,
+		continuous_ball,
+		continuous_num
+		FROM continuous_balls
+		WHERE issue =#{issue,jdbcType=VARCHAR}
+	</select>
+
+    <select id="ContinuousBall.getContinuousBallWithSameIssue" parameterType="String" resultType="com.ldxx.lottery.orm.ContinuousBall">
+		SELECT issue,
+		continuous_ball,
+		continuous_num
+		FROM continuous_balls
+		WHERE issue like CONCAT('%', #{issue,jdbcType=VARCHAR})  
+	</select>
+
+</mapper>
+
+
+
+
+
+
+
+
+

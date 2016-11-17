@@ -21,6 +21,7 @@
 	<mappers>  
     	<mapper resource="com/ldxx/lottery/orm/LotteryResult-Map.xml" />  
     	<mapper resource="com/ldxx/lottery/orm/BonusInfo-Map.xml" /> 
+    	<mapper resource="com/ldxx/lottery/orm/ContinuousBall-Map.xml" /> 
 	</mappers>
 
 </configuration>

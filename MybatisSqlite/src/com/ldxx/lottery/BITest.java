@@ -20,7 +20,7 @@ public class BITest {
 		String[] is;
 		String bInfo;
 		
-		for (int i = 2016124; i < 2016134; i++) {
+		for (int i = 2016124; i < 2016135; i++) {
 			issue = String.valueOf(i);
 			lr = rd.getResultByIssue(issue);
 			//System.out.println(lr.getBonus_info());
