@@ -23,6 +23,7 @@
     	<mapper resource="com/ldxx/lottery/orm/BonusInfo-Map.xml" /> 
     	<mapper resource="com/ldxx/lottery/orm/ContinuousBall-Map.xml" /> 
     	<mapper resource="com/ldxx/lottery/orm/FirstDistribution-Map.xml" /> 
+    	<mapper resource="com/ldxx/lottery/orm/Recommend-Map.xml" /> 
 	</mappers>
 
 </configuration>
